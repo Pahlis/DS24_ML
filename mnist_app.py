@@ -19,9 +19,8 @@ st.markdown("""
 st.title("MNIST Sifferklassificerare")
 st.write("Välj om du vill rita en siffra i rutan eller ladda upp en bild för att klassificera.")
 
-  # Debug
 
-# Ladda modell och normaliseringsinformation
+
 @st.cache_resource
 def load_model():
     try:
@@ -32,7 +31,7 @@ def load_model():
         st.error("Kunde inte hitta modell eller normaliseringsfiler. Kontrollera att de har sparats.")
         return None, None
 
-# Ladda modell
+
 model, norm_info = load_model()
 
 
